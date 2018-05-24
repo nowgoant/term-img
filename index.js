@@ -15,13 +15,14 @@ function unsupported() {
 }
 
 function main(image, options = {}) {
-	const fallback = typeof options.fallback === 'function' ? options.fallback : unsupported;
+	const fallback =
+		typeof options.fallback === 'function' ? options.fallback : unsupported;
 
 	if (!(image && image.length > 0)) {
 		throw new TypeError('Image required');
 	}
 
-	if (process.env.TERM_PROGRAM !== 'iTerm.app') {
+	if (process.env.TERM_PROGRAM !== 'iTerm.app' && !options.noCheckITermApp) {
 		return fallback;
 	}
 

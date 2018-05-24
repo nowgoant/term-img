@@ -1,6 +1,6 @@
 {
-	"name": "term-img",
-	"version": "2.1.0",
+	"name": "term-img-x",
+	"version": "0.0.1",
 	"description": "Display images in iTerm",
 	"license": "MIT",
 	"repository": "sindresorhus/term-img",
@@ -15,9 +15,7 @@
 	"scripts": {
 		"test": "xo && ava"
 	},
-	"files": [
-		"index.js"
-	],
+	"files": ["index.js"],
 	"keywords": [
 		"term",
 		"image",
